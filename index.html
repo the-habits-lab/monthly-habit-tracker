@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Order Habit Tracker</title>
+<title>30 Day Habit Tracker</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -12,28 +12,32 @@ font-family:'Segoe UI',sans-serif;
 background:#0f0f0f;
 color:white;
 text-align:center;
-overflow-x:hidden;
 }
 
 .container{
-max-width:600px;
+max-width:900px;
 margin:auto;
 padding:40px 20px;
 }
 
 h1{
 color:#00ffa6;
-font-size:32px;
+font-size:36px;
+}
+
+h2{
+margin-top:50px;
 }
 
 p{
-opacity:0.8;
+opacity:0.85;
+line-height:1.6;
 }
 
 .btn{
 display:inline-block;
 background:#25D366;
-padding:15px 35px;
+padding:16px 35px;
 color:white;
 text-decoration:none;
 border-radius:10px;
@@ -46,7 +50,29 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* live sale popup */
+.preview{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.preview img{
+width:100%;
+border-radius:10px;
+}
+
+.features{
+margin-top:40px;
+text-align:left;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.features li{
+margin:12px 0;
+}
 
 .popup{
 position:fixed;
@@ -55,14 +81,16 @@ left:20px;
 background:#1a1a1a;
 padding:15px 20px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.6);
 display:none;
-animation:fade 0.5s;
 }
 
-@keyframes fade{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
+.urgency{
+background:#1a1a1a;
+padding:15px;
+border-radius:10px;
+margin-top:20px;
+color:#ff5757;
+font-weight:bold;
 }
 
 </style>
@@ -74,11 +102,54 @@ to{opacity:1; transform:translateY(0);}
 
 <h1>30 Day Habit Tracker</h1>
 
-<p>Build discipline and transform your life in 30 days.</p>
+<p>
+Build discipline, track progress, and transform your life in just 30 days.
+This tracker helps you stay consistent with your goals like exercise, prayer,
+reading, productivity and self-improvement.
+</p>
 
 <a class="btn"
-href="https://wa.me/91YOURNUMBER?text=Hello%20I%20want%20the%2030%20Day%20Habit%20Tracker">
+href="https://wa.me/919906778854?text=Hello%20I%20want%20the%2030%20Day%20Habit%20Tracker">
 Order on WhatsApp
+</a>
+
+<div class="urgency">
+⚡ Limited Time Offer – Many people are buying this tracker today.
+</div>
+
+<h2>Preview</h2>
+
+<div class="preview">
+
+<img src="preview1.jpg">
+
+<img src="preview2.jpg">
+
+<img src="preview3.jpg">
+
+</div>
+
+<h2>Why Use a Habit Tracker?</h2>
+
+<ul class="features">
+
+<li>✔ Build strong daily habits</li>
+
+<li>✔ Stay consistent with your goals</li>
+
+<li>✔ Track your progress visually</li>
+
+<li>✔ Increase productivity</li>
+
+<li>✔ Improve discipline and focus</li>
+
+<li>✔ Perfect for fitness, study, prayer, and personal growth</li>
+
+</ul>
+
+<a class="btn"
+href="https://wa.me/919906778854?text=Hello%20I%20want%20the%2030%20Day%20Habit%20Tracker">
+Get It Now on WhatsApp
 </a>
 
 </div>
@@ -93,7 +164,6 @@ const names = [
 "Imran from Srinagar",
 "Arjun from Bangalore",
 "Fatima from Hyderabad",
-"Zaid from Pune",
 "Ali from Lucknow"
 ];
 
@@ -113,14 +183,7 @@ popup.style.display="none";
 
 }
 
-setInterval(showPopup,6000);
-
-
-/* auto whatsapp redirect */
-
-setTimeout(()=>{
-window.location.href="https://wa.me/91YOURNUMBER?text=Hello%20I%20want%20the%2030%20Day%20Habit%20Tracker";
-},20000);
+setInterval(showPopup,7000);
 
 </script>
 
