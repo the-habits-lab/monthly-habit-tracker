@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Order Habit Tracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:#0f0f0f;
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.container{
+max-width:600px;
+margin:auto;
+padding:40px 20px;
+}
+
+h1{
+color:#00ffa6;
+font-size:32px;
+}
+
+p{
+opacity:0.8;
+}
+
+.btn{
+display:inline-block;
+background:#25D366;
+padding:15px 35px;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-size:18px;
+margin-top:25px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* live sale popup */
+
+.popup{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#1a1a1a;
+padding:15px 20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.6);
+display:none;
+animation:fade 0.5s;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>30 Day Habit Tracker</h1>
+
+<p>Build discipline and transform your life in 30 days.</p>
+
+<a class="btn"
+href="https://wa.me/91YOURNUMBER?text=Hello%20I%20want%20the%2030%20Day%20Habit%20Tracker">
+Order on WhatsApp
+</a>
+
+</div>
+
+<div class="popup" id="salePopup"></div>
+
+<script>
+
+const names = [
+"Rahul from Delhi",
+"Ayesha from Mumbai",
+"Imran from Srinagar",
+"Arjun from Bangalore",
+"Fatima from Hyderabad",
+"Zaid from Pune",
+"Ali from Lucknow"
+];
+
+function showPopup(){
+
+let randomName = names[Math.floor(Math.random()*names.length)];
+
+let popup = document.getElementById("salePopup");
+
+popup.innerHTML = randomName + " just purchased the Habit Tracker";
+
+popup.style.display="block";
+
+setTimeout(()=>{
+popup.style.display="none";
+},4000);
+
+}
+
+setInterval(showPopup,6000);
+
+
+/* auto whatsapp redirect */
+
+setTimeout(()=>{
+window.location.href="https://wa.me/91YOURNUMBER?text=Hello%20I%20want%20the%2030%20Day%20Habit%20Tracker";
+},20000);
+
+</script>
+
+</body>
+</html>
